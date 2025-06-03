@@ -1,50 +1,65 @@
-# 📘 AddressBookApp (.NET Minimal API)
+# 📘 Libreta de Contactos - API REST
 
-Este proyecto implementa un backend RESTful para una aplicación de libreta de direcciones utilizando **.NET 8**, **Minimal APIs** y **Swagger**. La arquitectura sigue los principios de la **Arquitectura Limpia (Clean Architecture)**, separando las responsabilidades en capas bien definidas: Dominio, Aplicación, Infraestructura e Interfaz.
-
----
-
-## ✅ Características
-
-- `GET /contacts`  
-  Devuelve todos los contactos ordenados alfabéticamente por nombre.  
-  Soporta filtrado opcional mediante el parámetro de consulta `phrase` (insensible a mayúsculas/minúsculas).
-
-- `GET /contacts/{id}`  
-  Devuelve los detalles de un contacto específico por su ID.
-
-- `DELETE /contacts/{id}`  
-  Elimina un contacto por su ID. Devuelve `204 No Content` si fue exitoso.
+Este proyecto implementa una **API REST** para gestionar una libreta de contactos, creada con **.NET 8**, **Minimal API**, y principios de **Clean Architecture**. Incluye una interfaz Swagger personalizada para documentación y pruebas.
 
 ---
 
-## ⚙️ Detalles de implementación
+## 🧱 Estructura del proyecto
 
-- La fuente de datos es una **base falsa en memoria** ideal para pruebas y demostraciones (portada desde un `fakedatabase.js` original).
-- Manejo de errores conforme al estándar:
-  - `400 Bad Request` si está vacío.
-  - `404 Not Found` para rutas o IDs inexistentes.
-  - `405 Method Not Allowed` para métodos no permitidos en rutas válidas.
-  - `204 No Content` al eliminar correctamente un contacto.
-- Incluye **Swagger UI** para documentación y pruebas de los endpoints de forma visual.
+- **Domain**: Entidades del dominio (ej. `Contact`)
+- **Application**: Interfaces como `IContactService`
+- **Infrastructure**: Servicio `JsonContactService` que simula una base de datos con un archivo `fakedatabase.json`
+- **API**: Punto de entrada principal con endpoints minimalistas y documentación Swagger
 
 ---
 
-## 🚀 Requisitos
+## 📂 Archivo `contacts.json`
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download)
+Los datos de los contactos se almacenan en `Infrastructure/Data/contacts.json`.  
+- Si el archivo no existe, se genera automáticamente con 10 contactos ficticios basados en personajes de Pokémon.
+- Este diseño permite sustituir fácilmente la fuente de datos por una base real (como SQL Server o EF Core) sin modificar la capa de aplicación o la API.
 
 ---
 
-## ▶️ Cómo ejecutar
+## 🔗 Endpoints disponibles
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/carlosqm09/AddressBookApp.git
-   cd AddressBookApp
-   ```
+| Método | Ruta                 | Descripción                             |
+|--------|----------------------|-----------------------------------------|
+| GET    | `/contacts`          | Lista todos los contactos               |
+| GET    | `/contacts?phrase=xy`| Filtra por nombre (case-insensitive)    |
+| GET    | `/contacts/{id}`     | Devuelve un contacto por su ID          |
+| DELETE | `/contacts/{id}`     | Elimina un contacto por su ID           |
 
-2. Restaura dependencias y ejecuta:
-   ```bash
-   dotnet run --project API
-   ```
+Los métodos `POST`, `PUT` y `PATCH` devolverán `405 Method Not Allowed`.
+
+## 🧪 Pruebas con Postman
+
+Se incluye una colección de Postman para probar los endpoints disponibles, incluyendo pruebas para códigos `405`.
+
+- [AddressBookAPI_PostmanCollection_withVariable.json](./AddressBookAPI_PostmanCollection_withVariable.json)
+
+Importa los archivos en Postman y asegúrate de establecer la variable `baseUrl` con tu `LOCALHOST`.
+
+---
+
+## 🖼 Capturas sugeridas
+
+Puedes agregar capturas aquí para mostrar:
+
+- Vista general de Swagger personalizada
+- Resultado de los endpoints
+- Vista del archivo `contacts.json`
+
+```
+📷 [Agregar captura aquí]
+📷 [Agregar captura aquí]
+```
+
+---
+
+## 👨‍💻 Autor
+
+**Carlos Quijada**  
+[GitHub](https://github.com/tu-repo) · carlos@example.com
+
+---
