@@ -13,9 +13,9 @@ Este proyecto implementa una **API REST** para gestionar una libreta de contacto
 
 ---
 
-## 📂 Archivo `contacts.json`
+## 📂 Archivo `fakedatabase.json`
 
-Los datos de los contactos se almacenan en `Infrastructure/Data/contacts.json`.  
+Los datos de los contactos se almacenan en `Infrastructure/Data/fakedatabase.json`.  
 - Si el archivo no existe, se genera automáticamente con 10 contactos ficticios basados en personajes de Pokémon.
 - Este diseño permite sustituir fácilmente la fuente de datos por una base real (como SQL Server o EF Core) sin modificar la capa de aplicación o la API.
 
@@ -36,7 +36,7 @@ Los métodos `POST`, `PUT` y `PATCH` devolverán `405 Method Not Allowed`.
 
 Se incluye una colección de Postman para probar los endpoints disponibles, incluyendo pruebas para códigos `405`.
 
-- [AddressBookAPI_PostmanCollection_withVariable.json](./AddressBookAPI_PostmanCollection_withVariable.json)
+- [AddressBookAPI_PostmanCollection_withVariable.json](./AddressBook API.postman_collection.json)
 
 Importa los archivos en Postman y asegúrate de establecer la variable `baseUrl` con tu `LOCALHOST`.
 
