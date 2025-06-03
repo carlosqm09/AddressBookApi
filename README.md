@@ -1,28 +1,55 @@
-📘 Repository Description
-AddressBookApp (.NET Minimal API)
+# 📘 AddressBookApp (.NET Minimal API)
 
-This project implements a RESTful backend for an address book application using .NET 8, Minimal APIs, and Swagger. The architecture follows Clean Architecture principles, separating concerns into well-defined layers: Domain, Application, Infrastructure, and Interface.
+Este proyecto implementa un backend RESTful para una aplicación de libreta de direcciones utilizando **.NET 8**, **Minimal APIs** y **Swagger**. La arquitectura sigue los principios de la **Arquitectura Limpia (Clean Architecture)**, separando las responsabilidades en capas bien definidas: Dominio, Aplicación, Infraestructura e Interfaz.
 
-✅ Features
-GET /contacts:
-Retrieves all contacts, sorted alphabetically by name.
-Supports optional filtering using the phrase query parameter (case-insensitive).
+---
 
-GET /contacts/{id}:
-Retrieves the details of a single contact by ID.
+## ✅ Características
 
-DELETE /contacts/{id}:
-Deletes a contact by ID and returns 204 No Content on success.
+- `GET /contacts`  
+  Devuelve todos los contactos ordenados alfabéticamente por nombre.  
+  Soporta filtrado opcional mediante el parámetro de consulta `phrase` (insensible a mayúsculas/minúsculas).
 
-⚙️ Implementation Notes
-A fake in-memory data source is used for demonstration and testing purposes (replacing the original fakedatabase.js).
+- `GET /contacts/{id}`  
+  Devuelve los detalles de un contacto específico por su ID.
 
-Clean error handling:
+- `DELETE /contacts/{id}`  
+  Elimina un contacto por su ID. Devuelve `204 No Content` si fue exitoso.
 
-400 Bad Request when phrase is empty (phrase=)
+---
 
-404 Not Found for invalid IDs or unsupported routes
+## ⚙️ Detalles de implementación
 
-405 Method Not Allowed for unsupported HTTP methods
+- La fuente de datos es una **base falsa en memoria** ideal para pruebas y demostraciones (portada desde un `fakedatabase.js` original).
+- Manejo de errores conforme al estándar:
+  - `400 Bad Request` si `phrase=` está vacío.
+  - `404 Not Found` para rutas o IDs inexistentes.
+  - `405 Method Not Allowed` para métodos no permitidos en rutas válidas.
+  - `204 No Content` al eliminar correctamente un contacto.
+- Incluye **Swagger UI** para documentación y pruebas de los endpoints de forma visual.
 
-Fully integrated with Swagger for easy testing and API documentation
+---
+
+## 🚀 Requisitos
+
+- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download)
+
+---
+
+## ▶️ Cómo ejecutar
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/AddressBookApp.git
+   cd AddressBookApp
+   ```
+
+2. Restaura dependencias y ejecuta:
+   ```bash
+   dotnet run --project API
+   ```
+
+3. Abre tu navegador en:
+   ```
+   https://localhost:5001/swagger
+   ```
