@@ -18,7 +18,7 @@ Este proyecto implementa una **API REST** para gestionar una libreta de contacto
 Los datos de los contactos se almacenan en `API/Infrastructure/Data/fakedatabase.json`.  
 - Si el archivo no existe, se genera automáticamente con 10 contactos ficticios basados en personajes de Pokémon.
 - Este diseño permite sustituir fácilmente la fuente de datos por una base real (como SQL Server o EF Core) sin modificar la capa de aplicación o la API.
-
+- Vista del archivo [fakedatabase.json](https://github.com/carlosqm09/AddressBookApi/blob/master/API/Docs/Data/fakedatabase.json)
 ---
 
 ## 🔗 Endpoints disponibles
@@ -44,14 +44,16 @@ Importa los archivos en Postman y asegúrate de establecer la variable `baseUrl`
 
 ## 🖼 Capturas
 
-- Vista del archivo [fakedatabase.json](https://github.com/carlosqm09/AddressBookApi/blob/master/API/Docs/Data/fakedatabase.json)
-
-
 - Vista general de Swagger personalizada
+  
 📷 ![Swagger UI](https://raw.githubusercontent.com/carlosqm09/AddressBookApi/refs/heads/master/API/Docs/img/API_UI.png)
+
 - Resultado de los endpoints
+  
 📷 ![Ejemplo de respuesta JSON](https://raw.githubusercontent.com/carlosqm09/AddressBookApi/refs/heads/master/API/Docs/img/Example_response.png)
-- CColeccion de pruebas en Postman
+
+- Coleccion de pruebas en Postman
+  
 📷 ![Postman](https://raw.githubusercontent.com/carlosqm09/AddressBookApi/refs/heads/master/API/Docs/img/Postman_test.png)
 
 ---
