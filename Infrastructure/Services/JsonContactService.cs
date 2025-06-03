@@ -39,7 +39,10 @@ public class JsonContactService : IContactService
         var contacts = LoadContacts();
         if (phrase != null)
         {
-            if (phrase == "") throw new ArgumentException("phrase cannot be empty");
+            if (phrase == "")
+            {
+                throw new ArgumentException("phrase cannot be empty");
+            }
             contacts = contacts
                 .Where(c => c.Name.Contains(phrase, StringComparison.OrdinalIgnoreCase))
                 .ToList();
@@ -56,7 +59,10 @@ public class JsonContactService : IContactService
     {
         var contacts = LoadContacts();
         var contact = contacts.FirstOrDefault(c => c.Id == id);
-        if (contact == null) return false;
+        if (contact == null)
+        {
+            return false;
+        }
         contacts.Remove(contact);
         SaveContacts(contacts);
         return true;

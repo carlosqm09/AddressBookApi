@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "Name": "Ash Ketchum",
+    "Phone": "555-0001",
+    "AddressLines": [
+      "Pallet Town",
+      "Kanto"
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Misty",
+    "Phone": "555-0002",
+    "AddressLines": [
+      "Cerulean City",
+      "Kanto"
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "Brock",
+    "Phone": "555-0003",
+    "AddressLines": [
+      "Pewter City",
+      "Kanto"
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "Pikachu",
+    "Phone": "555-0004",
+    "AddressLines": [
+      "Ash\u0027s Backpack",
+      "Everywhere"
+    ]
+  },
+  {
+    "Id": 5,
+    "Name": "Team Rocket",
+    "Phone": "555-0005",
+    "AddressLines": [
+      "Hot Air Balloon",
+      "Sky"
+    ]
+  },
+  {
+    "Id": 6,
+    "Name": "Professor Oak",
+    "Phone": "555-0006",
+    "AddressLines": [
+      "Laboratory",
+      "Pallet Town"
+    ]
+  },
+  {
+    "Id": 7,
+    "Name": "Gary Oak",
+    "Phone": "555-0007",
+    "AddressLines": [
+      "Somewhere Better",
+      "Rival Road"
+    ]
+  },
+  {
+    "Id": 8,
+    "Name": "May",
+    "Phone": "555-0008",
+    "AddressLines": [
+      "Petalburg City",
+      "Hoenn"
+    ]
+  },
+  {
+    "Id": 9,
+    "Name": "Dawn",
+    "Phone": "555-0009",
+    "AddressLines": [
+      "Twinleaf Town",
+      "Sinnoh"
+    ]
+  },
+  {
+    "Id": 10,
+    "Name": "Cynthia",
+    "Phone": "555-0010",
+    "AddressLines": [
+      "Celestic Town",
+      "Sinnoh"
+    ]
+  }
+]

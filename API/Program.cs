@@ -1,16 +1,47 @@
-using AddressBookApp.Application.Interfaces;
+﻿using AddressBookApp.Application.Interfaces;
 using AddressBookApp.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "Address Book API",
+        Version = "v1",
+        Description = "API REST para gestionar contactos. Implementada con .NET 8 y Minimal API siguiendo Clean Architecture.",
+        Contact = new()
+        {
+            Name = "Carlos Quijada",
+            Email = "carlosqm97@hotmail.com",
+            Url = new Uri("https://github.com/carlosqm09")
+        }
+    });
+});
 builder.Services.AddSingleton<IContactService, JsonContactService>();
 
 var app = builder.Build();
 
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(options =>
+{
+    options.DocumentTitle = "📘 Libreta de Contactos - API REST";
+    options.DisplayRequestDuration();
+    options.HeadContent = """
+    <style>
+        body { font-family: 'Roboto', sans-serif; font-weight: 600; }
+        .topbar {
+            background-color: #1976d2 !important;
+        }
+        .topbar-wrapper img { display: none !important; }
+        .topbar-wrapper span { display: inline-block; margin-left: 60px; }
+        .swagger-ui .topbar .download-url-wrapper { margin-left: auto; }
+    </style>
+    <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@600&display=swap' rel='stylesheet'>
+""";
+    options.SupportedSubmitMethods(new[] { Swashbuckle.AspNetCore.SwaggerUI.SubmitMethod.Get, Swashbuckle.AspNetCore.SwaggerUI.SubmitMethod.Delete });
+});
 
 app.MapGet("/contacts", (IContactService service, string? phrase) =>
 {
