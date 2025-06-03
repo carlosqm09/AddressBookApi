@@ -36,7 +36,7 @@ Los métodos `POST`, `PUT` y `PATCH` devolverán `405 Method Not Allowed`.
 
 Se incluye una colección de Postman para probar los endpoints disponibles, incluyendo pruebas para códigos `405`.
 
-- [AddressBook API.postman_collection.json](./AddressBook API.postman_collection.json)
+- 👉 [Colección completa con variable baseUrl](https://github.com/carlosqm09/AddressBookApi/tree/master/API/Infrastructure/AddressBook%20API.postman_collection)
 
 Importa los archivos en Postman y asegúrate de establecer la variable `baseUrl` con tu `LOCALHOST`.
 
