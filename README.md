@@ -48,7 +48,7 @@ Puedes agregar capturas aquí para mostrar:
 
 - Vista general de Swagger personalizada
 - Resultado de los endpoints
-- Vista del archivo `fakedatabase.json`
+- Vista del archivo [fakedatabase.json](https://github.com/carlosqm09/AddressBookApi/blob/master/API/Infrastructure/Data/fakedatabase.json)
 
 ```
 📷 [Agregar captura aquí]
