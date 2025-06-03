@@ -48,11 +48,11 @@ Importa los archivos en Postman y asegúrate de establecer la variable `baseUrl`
 
 ```
 - Vista general de Swagger personalizada
-📷 ![Swagger UI](https://github.com/carlosqm09/AddressBookApi/blob/master/API/Docs/img/API_UI.png?raw=true)
+📷 ![Swagger UI](https://raw.githubusercontent.com/carlosqm09/AddressBookApi/refs/heads/master/API/Docs/img/API_UI.png?raw=true)
 - Resultado de los endpoints
-📷 ![Ejemplo de respuesta JSON](https://github.com/carlosqm09/AddressBookApi/blob/master/API/Docs/img/Example_response.png?raw=true)
+📷 ![Ejemplo de respuesta JSON](https://raw.githubusercontent.com/carlosqm09/AddressBookApi/refs/heads/master/API/Docs/img/Example_response.png?raw=true)
 - CColeccion de pruebas en Postman
-📷 ![Postman](https://github.com/carlosqm09/AddressBookApi/blob/master/API/Docs/img/Postman_test.png?raw=true)
+📷 ![Postman](https://raw.githubusercontent.com/carlosqm09/AddressBookApi/refs/heads/master/API/Docs/img/Postman_test.png?raw=true)
 ```
 
 ---
