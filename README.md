@@ -40,16 +40,11 @@ Este proyecto implementa un backend RESTful para una aplicación de libreta de d
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/AddressBookApp.git
+   git clone https://github.com/carlosqm09/AddressBookApp.git
    cd AddressBookApp
    ```
 
 2. Restaura dependencias y ejecuta:
    ```bash
    dotnet run --project API
-   ```
-
-3. Abre tu navegador en:
-   ```
-   https://localhost:5001/swagger
    ```
