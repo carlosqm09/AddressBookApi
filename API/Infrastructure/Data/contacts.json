@@ -1,0 +1,92 @@
+[
+  {
+    "Id": "84e9354a",
+    "Name": "Abbigail Wunsch",
+    "Phone": "123-456-0001",
+    "AddressLines": [
+      "123 Maple St",
+      "Springfield"
+    ]
+  },
+  {
+    "Id": "26aa8a2c",
+    "Name": "Zoila Daugherty II",
+    "Phone": "123-456-0002",
+    "AddressLines": [
+      "456 Elm St",
+      "Hickory"
+    ]
+  },
+  {
+    "Id": "f735859d",
+    "Name": "Zakary Mayer",
+    "Phone": "123-456-0003",
+    "AddressLines": [
+      "789 Pine St",
+      "Greenville"
+    ]
+  },
+  {
+    "Id": "44f9d698",
+    "Name": "Theresa Gorczany",
+    "Phone": "123-456-0004",
+    "AddressLines": [
+      "159 Cedar Ave",
+      "Lakeside"
+    ]
+  },
+  {
+    "Id": "7d302beb",
+    "Name": "Chris Thomas",
+    "Phone": "123-456-0005",
+    "AddressLines": [
+      "753 Oak Blvd",
+      "Hilltop"
+    ]
+  },
+  {
+    "Id": "46865bf6",
+    "Name": "Alice Lewis",
+    "Phone": "123-456-0006",
+    "AddressLines": [
+      "951 Birch Rd",
+      "Midtown"
+    ]
+  },
+  {
+    "Id": "9749d78e",
+    "Name": "John Smith",
+    "Phone": "123-456-0007",
+    "AddressLines": [
+      "357 Spruce Ln",
+      "Riverwood"
+    ]
+  },
+  {
+    "Id": "c28a654c",
+    "Name": "Lara Croft",
+    "Phone": "123-456-0008",
+    "AddressLines": [
+      "111 Tomb Way",
+      "Adventure City"
+    ]
+  },
+  {
+    "Id": "3690ea6b",
+    "Name": "Gordon Freeman",
+    "Phone": "123-456-0009",
+    "AddressLines": [
+      "42 Lambda Dr",
+      "Black Mesa"
+    ]
+  },
+  {
+    "Id": "b5044fec",
+    "Name": "Ada Wong",
+    "Phone": "123-456-0010",
+    "AddressLines": [
+      "88 Red Umbrella",
+      "Raccoon City"
+    ]
+  }
+]

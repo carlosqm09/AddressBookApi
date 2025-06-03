@@ -1,25 +1,45 @@
+using AddressBookApp.Application.Interfaces;
+using AddressBookApp.Infrastructure.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<IContactService, JsonContactService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.MapGet("/contacts", (IContactService service, string? phrase) =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    try
+    {
+        var contacts = service.GetAll(phrase);
+        return Results.Ok(contacts);
+    }
+    catch (ArgumentException)
+    {
+        return Results.BadRequest();
+    }
+});
 
-app.UseHttpsRedirection();
+app.MapGet("/contacts/{id}", (IContactService service, int id) =>
+{
+    var contact = service.GetById(id);
+    return contact is not null ? Results.Ok(contact) : Results.NotFound();
+});
 
-app.UseAuthorization();
+app.MapDelete("/contacts/{id}", (IContactService service, int id) =>
+{
+    var deleted = service.Delete(id);
+    return deleted ? Results.NoContent() : Results.NotFound();
+});
 
-app.MapControllers();
+app.MapMethods("/contacts", new[] { "POST", "PUT", "PATCH" }, () => Results.StatusCode(405)).ExcludeFromDescription();
+app.MapMethods("/contacts/{id}", new[] { "POST", "PUT", "PATCH" }, () => Results.StatusCode(405)).ExcludeFromDescription();
+
+app.MapFallback(() => Results.NotFound());
 
 app.Run();
