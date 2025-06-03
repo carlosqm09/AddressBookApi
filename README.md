@@ -22,7 +22,7 @@ Este proyecto implementa un backend RESTful para una aplicación de libreta de d
 
 - La fuente de datos es una **base falsa en memoria** ideal para pruebas y demostraciones (portada desde un `fakedatabase.js` original).
 - Manejo de errores conforme al estándar:
-  - `400 Bad Request` si `phrase=` está vacío.
+  - `400 Bad Request` si está vacío.
   - `404 Not Found` para rutas o IDs inexistentes.
   - `405 Method Not Allowed` para métodos no permitidos en rutas válidas.
   - `204 No Content` al eliminar correctamente un contacto.
