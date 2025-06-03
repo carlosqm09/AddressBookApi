@@ -36,23 +36,23 @@ Los métodos `POST`, `PUT` y `PATCH` devolverán `405 Method Not Allowed`.
 
 Se incluye una colección de Postman para probar los endpoints disponibles, incluyendo pruebas para códigos `405`.
 
-- 👉 [Colección completa con variable baseUrl](https://github.com/carlosqm09/AddressBookApi/blob/master/API/Infrastructure/AddressBook%20API.postman_collection.json)
+- 👉 [Colección completa con variable baseUrl](https://github.com/carlosqm09/AddressBookApi/blob/master/API/Docs/AddressBook%20API.postman_collection.json)
 
 Importa los archivos en Postman y asegúrate de establecer la variable `baseUrl` con tu `LOCALHOST`.
 
 ---
 
-## 🖼 Capturas sugeridas
+## 🖼 Capturas
 
-Puedes agregar capturas aquí para mostrar:
-
-- Vista general de Swagger personalizada
-- Resultado de los endpoints
-- Vista del archivo [fakedatabase.json](https://github.com/carlosqm09/AddressBookApi/blob/master/API/Infrastructure/Data/fakedatabase.json)
+- Vista del archivo [fakedatabase.json](https://github.com/carlosqm09/AddressBookApi/blob/master/API/Docs/Data/fakedatabase.json)
 
 ```
-📷 [Agregar captura aquí]
-📷 [Agregar captura aquí]
+- Vista general de Swagger personalizada
+📷 ![Swagger UI](https://github.com/carlosqm09/AddressBookApi/blob/master/API/docs/img/swagger%20ui.png?raw=true)
+- Resultado de los endpoints
+📷 ![Swagger UI](https://github.com/carlosqm09/AddressBookApi/blob/master/API/docs/img/Example%20response.png?raw=true)
+- CColeccion de pruebas en Postman
+📷 ![Swagger UI](https://github.com/carlosqm09/AddressBookApi/blob/master/API/docs/img/Postman%20test.png?raw=true)
 ```
 
 ---
