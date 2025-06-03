@@ -48,7 +48,7 @@ Puedes agregar capturas aquí para mostrar:
 
 - Vista general de Swagger personalizada
 - Resultado de los endpoints
-- Vista del archivo `contacts.json`
+- Vista del archivo `fakedatabase.json`
 
 ```
 📷 [Agregar captura aquí]
@@ -60,6 +60,6 @@ Puedes agregar capturas aquí para mostrar:
 ## 👨‍💻 Autor
 
 **Carlos Quijada**  
-[GitHub](https://github.com/tu-repo) · carlos@example.com
+[GitHub](https://github.com/carlosqm09) · carmanu09@gmail.com
 
 ---
