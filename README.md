@@ -46,14 +46,13 @@ Importa los archivos en Postman y asegúrate de establecer la variable `baseUrl`
 
 - Vista del archivo [fakedatabase.json](https://github.com/carlosqm09/AddressBookApi/blob/master/API/Docs/Data/fakedatabase.json)
 
-```
+
 - Vista general de Swagger personalizada
 📷 ![Swagger UI](https://raw.githubusercontent.com/carlosqm09/AddressBookApi/refs/heads/master/API/Docs/img/API_UI.png)
 - Resultado de los endpoints
 📷 ![Ejemplo de respuesta JSON](https://raw.githubusercontent.com/carlosqm09/AddressBookApi/refs/heads/master/API/Docs/img/Example_response.png)
 - CColeccion de pruebas en Postman
 📷 ![Postman](https://raw.githubusercontent.com/carlosqm09/AddressBookApi/refs/heads/master/API/Docs/img/Postman_test.png)
-```
 
 ---
 
