@@ -6,7 +6,7 @@ namespace AddressBookApp.Infrastructure.Services;
 
 public class JsonContactService : IContactService
 {
-    private readonly string _filePath = Path.Combine("Infrastructure", "Data", "fakedatabase.json");
+    private readonly string _filePath = Path.Combine("Docs", "Data", "fakedatabase.json");
     private List<Contact> LoadContacts()
     {
         if (!File.Exists(_filePath))
